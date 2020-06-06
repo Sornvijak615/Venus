@@ -29,22 +29,18 @@ void loop() {
   Serial.println(distance);
 
   if (distance <= 7) {
-    analogWrite(LED1, 32);
-  } else {
     analogWrite(LED1, 0);
+    analogWrite(LED2, 32);
+    analogWrite(LED3, 0);
   }
-  if (distance <= 14 && distance > 7) {
+  else if (distance <= 14 && distance > 7) {
     analogWrite(LED1, 32);
     analogWrite(LED2, 32);
     analogWrite(LED3, 32);
-  } else {
-    analogWrite(LED1, 0);
+  }
+  else if (distance <= 21 && distance > 14) {
+    analogWrite(LED1, 32);
     analogWrite(LED2, 0);
     analogWrite(LED3, 0);
-  }
-  if (distance <= 21 && distance > 14) {
-    analogWrite(LED2, 32);
-  } else {
-    analogWrite(LED2, 0);
   }
 }
