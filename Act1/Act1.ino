@@ -28,17 +28,17 @@ void loop() {
   distance = (duration / 2) / 28.5;
   Serial.println(distance);
 
-  if (distance <= 7) {
+  if (distance <= 10) {
     analogWrite(LED1, 0);
     analogWrite(LED2, 32);
     analogWrite(LED3, 0);
   }
-  else if (distance <= 14 && distance > 7) {
+  else if (distance <= 20 && distance > 10) {
     analogWrite(LED1, 32);
-    analogWrite(LED2, 32);
-    analogWrite(LED3, 32);
+    analogWrite(LED2, 15);
+    analogWrite(LED3, 0);
   }
-  else if (distance <= 21 && distance > 14) {
+  else if (distance <= 60 && distance > 20) {
     analogWrite(LED1, 32);
     analogWrite(LED2, 0);
     analogWrite(LED3, 0);
