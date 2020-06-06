@@ -18,7 +18,6 @@ void setup() {
 
   Serial.begin(9600);
 }
-
 void loop() {
   digitalWrite(trig, HIGH);
   delayMicroseconds(1000);
@@ -31,8 +30,7 @@ void loop() {
   if (distance <= 10) {
     analogWrite(LED1, 0);
     analogWrite(LED2, 32);
-    analogWrite(LED3, 0);
-  }
+    }
   else if (distance <= 20 && distance > 10) {
     analogWrite(LED1, 32);
     analogWrite(LED2, 15);
@@ -40,7 +38,5 @@ void loop() {
   }
   else if (distance <= 60 && distance > 20) {
     analogWrite(LED1, 32);
-    analogWrite(LED2, 0);
-    analogWrite(LED3, 0);
-  }
+ 
 }
